@@ -1,25 +1,24 @@
-function openApp(appName) {
-  const modal = document.getElementById('app-modal');
-  const appContent = document.getElementById('app-content');
-
-  // Apps simulieren
-  if (appName === 'photos') {
-    appContent.innerHTML = `
-      <h2>Fotos</h2>
-      <p>Hier sind deine Fotos.</p>
-      <img src="example-photo.jpg" alt="Beispielfoto" style="width: 100%; max-width: 300px;">
-    `;
-  } else if (appName === 'weather') {
-    appContent.innerHTML = `
-      <h2>Wetter</h2>
-      <p>Es ist sonnig mit 25°C.</p>
-    `;
-  }
-
+// Öffnen des Modals mit einer bestimmten Nachricht
+function showModal(message) {
+  const modal = document.getElementById('modal');
+  const modalMessage = document.getElementById('modal-message');
+  modalMessage.textContent = message;
   modal.style.display = 'flex';
+
+  // Das Modal nach 2 Sekunden wieder schließen
+  setTimeout(() => {
+    modal.style.display = 'none';
+  }, 2000);
 }
 
-function closeApp() {
-  const modal = document.getElementById('app-modal');
-  modal.style.display = 'none';
-}
+// Event Listener für den Home-Button
+const homeButton = document.querySelector('.home-button');
+homeButton.addEventListener('click', () => {
+  showModal('Hallo');  // Nachricht für den Home-Button Klick
+});
+
+// Event Listener für den Screen
+const screen = document.querySelector('.screen');
+screen.addEventListener('click', () => {
+  showModal('Guten Tag');  // Nachricht für den Screen Klick
+});
