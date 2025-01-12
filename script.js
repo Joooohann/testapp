@@ -14,7 +14,7 @@ function showModal(message) {
 // Event Listener für den Home-Button
 const homeButton = document.querySelector('.home-button');
 homeButton.addEventListener('click', () => {
-  showModal('Hallo');  // Nachricht für den Home-Button Klick
+  showModal('Guten Morgen');  // Nachricht für den Home-Button Klick
 });
 
 // Event Listener für den Screen
