@@ -1,77 +1,111 @@
+/* Grundlegende Stile für den Body */
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f1f1f1;
-  }
-  
-  .iphone {
-    width: 355px;
-    height: 700px;
-    background: #fff;
-    border-radius: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .screen {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 65px 17px 80px 17px; /* Padding oben weiter reduziert, Bild nach oben verschoben */
-    box-sizing: border-box;
-  }
-  
-  .background {
-    background-image: url('bild.jpg'); /* Das Hintergrundbild */
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .home-button {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    width: 60px;
-    height: 60px;
-    background-color: #333;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .button-inner {
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .camera {
-    position: absolute;
-    top: 15px; /* Kamera weiter nach unten verschoben, damit sie sichtbarer ist */
-    left: 50%;
-    width: 10px;  /* Erhöht, um sie sichtbarer zu machen */
-    height: 10px; /* Erhöht, um sie sichtbarer zu machen */
-    background-color: red; /* Temporär rot, um sicherzustellen, dass sie angezeigt wird */
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: 20; /* Kamera sicher oben über anderen Elementen */
-  }
-  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+/* iPhone Simulation */
+.iphone {
+  width: 355px;
+  height: 700px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Der Screen */
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 65px 17px 80px 17px; /* Padding oben weiter reduziert, Bild nach oben verschoben */
+  box-sizing: border-box;
+}
+
+/* Das Hintergrundbild */
+.background {
+  background-image: url('bild.jpg'); /* Das Hintergrundbild */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Der Home-Button */
+.home-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Die innere Form des Home-Buttons */
+.button-inner {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Die Kamera oben */
+.camera {
+  position: absolute;
+  top: 15px; /* Kamera weiter nach unten verschoben, damit sie sichtbarer ist */
+  left: 50%;
+  width: 10px;  /* Erhöht, um sie sichtbarer zu machen */
+  height: 10px; /* Erhöht, um sie sichtbarer zu machen */
+  background-color: red; /* Temporär rot, um sicherzustellen, dass sie angezeigt wird */
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 20; /* Kamera sicher oben über anderen Elementen */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#modal-message {
+  font-size: 18px;
+  color: #333;
+}
